@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .btnNum{
-  @apply py-3 rounded-3xl font-Roboto bg-slate-100 text-2xl hover:bg-slate-300
+  @apply py-3 rounded-3xl font-Roboto bg-slate-300 text-2xl hover:bg-slate-400
 }
 .btnLog{
   @apply py-3 rounded-3xl  font-Roboto font-extrabold  bg-orange-400 text-2xl text-white hover:bg-orange-600

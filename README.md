@@ -1,2 +1,2 @@
 # Calculator-App
-simple and designed  UI calculator Web-App
+simple and design UI Web calculator App

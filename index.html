@@ -2,51 +2,53 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./calculator.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator App</title>
-    <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <div id="app" class="min-h-screen pt-8 bg-gray-300">
-     <div class="max-w-md max-h-full p-5 mx-auto bg-gray-800 rounded-lg"> 
-      <div class="font-semibold font-Roboto text-yellow-50 text-2xl tracking-wide">Quick~Calc</div>
-      <div class="p-3 py-5 my-5 text-right bg-white  rounded-md">
-        <div class="text-2xl text-gray-700 pb-3 tracking-wider">6+5</div>
-        <div class="text-gray-800 font-Poppins text-3xl ">887</div>
-      </div>
-      <div class="flex"> 
+   <div id="app"  class="min-h-screen bg-no-repeat bg-cover bg-opacity-5 pt-8" style="background-image: url('/bg-calc.jpg')">
+     <div class="max-w-md max-h-full p-5 mx-auto bg-gray-900 rounded-lg"> <!--calculator  container-->
+        <div class="font-semibold font-Roboto text-yellow-50 text-2xl tracking-wide">Quick~Calc</div> <!--calculator head div text -->
+        <div class="my-3 h-24 text-right bg-white  rounded-md">  <!--arithmetic operation,result container-->
+         <div class="text-2xl text-gray-700 py-3 px-3 tracking-wider" id="operand"></div>
+         <div class="text-gray-800 font-Poppins text-3xl pb-3 px-3" id="result" ></div>
+        </div>
+        <div class="flex"> <!--numbers,operation buttons -->
         <div class="w-10/12 ">
-        <div class="grid grid-cols-3 gap-3 mr-3 ">
-        <button class="rounded-full font-Roboto font-extrabold 
-         text-red-600 bg-red-200 hover:bg-red-400 text-3xl">c</button>
-        <button class="btnNum">(</button>
-        <button class="btnNum">)</button>
-        <button class="btnNum">7</button>
-        <button class="btnNum">8</button>
-        <button class="btnNum">9</button>
-        <button class="btnNum">4</button>
-        <button class="btnNum">5</button>
-        <button class="btnNum">6</button>
-        <button class="btnNum">1</button>
-        <button class="btnNum">2</button>
-        <button class="btnNum">3</button>
-        <button class="btnNum col-span-2">0</button>
-        <button class="btnNum">.</button>
-      </div>
-    </div>
-        <div class="flex flex-col w-3/12 gap-3 ">
-          <button class="btnLog">/</button>
-          <button class="btnLog">x</button>
-          <button class="py-2 rounded-3xl font-Roboto font-extrabold bg-orange-400 text-4xl hover:bg-orange-600  text-white">-</button>
-          <button class="btnLog">+</button>
-          <button class="py-3 rounded-3xl font-Roboto font-extrabold bg-green-500 text-2xl hover:bg-green-700  text-white">=</button>
+        <div class="grid grid-cols-3 gap-3 mr-3 "> <!--numbers button grid-->
+          <button class="rounded-full font-Roboto font-bold 
+          text-red-600 bg-red-200 hover:bg-red-400 text-2xl" id="clear">C</button>
+          <button class="rounded-full font-Roboto font-bold 
+           text-red-600 bg-red-200 hover:bg-red-400 text-2xl" id="deleteNum">DE</button>
+          <button class="btnLog" data-operation>%</button>
+          <button class="btnNum" data-operand>7</button>
+          <button class="btnNum" data-operand>8</button>
+          <button class="btnNum" data-operand>9</button>
+          <button class="btnNum" data-operand>4</button>
+          <button class="btnNum" data-operand>5</button>
+          <button class="btnNum" data-operand>6</button>
+          <button class="btnNum" data-operand>1</button>
+          <button class="btnNum" data-operand>2</button>
+          <button class="btnNum" data-operand>3</button>
+          <button class="btnNum col-span-2" data-operand>0</button>
+          <button class="btnNum"  data-splOperand>.</button>
+        </div>
+        </div>
+        <div class="flex flex-col w-3/12 gap-3 "> <!--operation buttons div-->
+          <button class="btnLog" data-operation>/</button>
+          <button class="btnLog" data-operation>*</button>
+          <button class="py-2 rounded-3xl font-Roboto font-extrabold bg-orange-400
+           text-4xl hover:bg-orange-600  text-white" data-operation>-</button>
+          <button class="btnLog" data-operation>+</button>
+          <button class="py-3 rounded-3xl font-Roboto font-extrabold
+           bg-green-500 text-2xl hover:bg-green-700  text-white" id="equal">=</button>
         </div>
         
+        </div>
+       </div>
       </div>
-    </div>
-  </div>
  
-    <!-- <script type="module" src="/main.js"></script> -->
+    <script type="module" src="/main.js"></script>
   </body>
 </html>

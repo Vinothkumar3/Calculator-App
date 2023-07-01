@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Oswald:wght@500&family=Poppins:wght@600&family=Roboto:wght@700&display=swap');
 
-@tailwind base;
+@tailwind base; /* tailwind css directives*/
 @tailwind components;
 @tailwind utilities;
 
 .btnNum{
   @apply py-3 rounded-3xl font-Roboto bg-slate-300 text-2xl hover:bg-slate-400
 }
-.btnLog{
+.btnLog{ /* arithmetic operation btn*/
   @apply py-3 rounded-3xl  font-Roboto font-extrabold  bg-orange-400 text-2xl text-white hover:bg-orange-600
 }

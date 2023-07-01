@@ -3,7 +3,7 @@ export default {
   content: ["*"],
   theme: {
     extend: {
-      fontFamily:{
+      fontFamily:{ //font family adds 
         Montserrat: ['Montserrat', "sans-serif"],
         Oswald: ['Oswald', "sans-serif"],
         Poppins:['Poppins', "sans-serif"],

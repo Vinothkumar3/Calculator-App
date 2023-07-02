@@ -14,7 +14,7 @@ const appendText=(numbers)=>{ //every number click to show #operand div
    operand.textContent+= numbers 
 }
 
-const addNumberList=(numEls)=>{ //ever number click appendText fn
+const addNumberList=(numEls)=>{ //every number click appendText fn
     numEls.addEventListener("click",()=>{
       appendText(parseInt(numEls.innerText))
       
@@ -29,8 +29,7 @@ splNumber.addEventListener("click",(e)=>{ // dot num
   appendText(e.target.innerText) 
  }) 
 
- operation.forEach((opeEl)=>{ //operations buttons one by one pass arg addNumberList fn. 
-  addNumberList(num)
+ operation.forEach((opeEl)=>{ //operations buttons click pass arg appendText fn. 
    opeEl.addEventListener("click",()=>{
       appendText(opeEl.innerText)
    })
@@ -38,8 +37,8 @@ splNumber.addEventListener("click",(e)=>{ // dot num
 
 equal.addEventListener("click",()=>{ //equal button click event
   try { 
-    let evalExp= eval(operand.innerText)
-     result.innerText= evalExp
+    result.innerText= eval(operand.innerText)
+     
   } catch (error) {
     result.innerText="expression error!"
     
